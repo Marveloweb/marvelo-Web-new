@@ -1,5 +1,5 @@
 // Website check: while API_BASE is empty nothing below talks to the network and the old hand-off runs.
-const API_BASE = 'https://marveloweb-api.twilight-frog-a541.workers.dev';
+const API_BASE = '';
 const TURNSTILE_SITE_KEY = '0x4AAAAAAFppPrUIelJyqWJO';
 
 // "I already have a website" page: before/after slider, website-address hand-off, warning-signs checklist.

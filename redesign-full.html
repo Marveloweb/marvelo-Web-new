@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Website redesign for local businesses, previewed free — MarveloWeb</title>
+  <meta name="description" content="Already have a website? MarveloWeb redesigns it and shows you the new version free before you pay. Keep your domain, email and Google rankings. Live in 7 days.">
+  <meta property="og:title" content="See your redesigned website before you pay">
+  <meta property="og:description" content="Send us your website. We redesign it and show you the new version free. Keep your domain, email and rankings.">
+  <meta name="theme-color" content="#0F0F12">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230F0F12'/%3E%3Cpath d='M16 5l2.6 8.4L27 16l-8.4 2.6L16 27l-2.6-8.4L5 16l8.4-2.6z' fill='%23FF3D7F'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Instrument+Serif:ital@0;1&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=10">
+  <link rel="stylesheet" href="new.css?v=10">
+  <link rel="stylesheet" href="redesign.css?v=15">
+  <script>
+    (function () {
+      var d = document.documentElement, seen = false;
+      d.classList.add('js');
+      try { seen = sessionStorage.getItem('mw-intro') === '1'; } catch (e) {}
+      if (!seen && !matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('intro');
+      setTimeout(function () { d.classList.add('go', 'intro-leave'); }, 5000); // failsafe if main.js never runs
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Intro plays here too when someone lands on this page straight from an email -->
+  <div class="curtain" aria-hidden="true">
+    <div class="curtain__stage">
+      <svg class="curtain__spark" viewBox="0 0 24 24"><path d="M12 1l2.9 8.1L23 12l-8.1 2.9L12 23l-2.9-8.1L1 12l8.1-2.9z"/></svg>
+      <p class="curtain__word"><span>m</span><span>a</span><span>r</span><span>v</span><span>e</span><span>l</span><span>o</span><b><span>w</span><span>e</span><span>b</span></b></p>
+      <span class="curtain__line"></span>
+    </div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="nav" id="top">
+    <div class="wrap nav__inner">
+      <a class="logo" href="./" aria-label="MarveloWeb home">
+        <svg class="logo__spark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1l2.9 8.1L23 12l-8.1 2.9L12 23l-2.9-8.1L1 12l8.1-2.9z"/></svg>
+        <span>marvelo<b>web</b></span>
+      </a>
+      <nav class="nav__links" id="menu" aria-label="Primary">
+        <a href="#check">Check your site</a>
+        <a href="#how">How it works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a class="nav__switch" href="new-website.html">Need a new website?</a>
+        <a class="btn btn--ink nav__cta-mobile" href="#start">Get my free redesign</a>
+      </nav>
+      <a class="btn btn--ink nav__cta" href="#start">Get my free redesign</a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO: website address + before/after ============ -->
+    <section class="nb-hero" data-sticky-hide>
+      <div class="wrap nb-hero__grid">
+        <div class="nb-hero__copy">
+          <p class="eyebrow hero-in"><span class="dot" aria-hidden="true"></span> For businesses that already have a website</p>
+          <h1 class="nb-title">
+            <span class="line"><span class="line__in">Your work got better.</span></span>
+            <span class="line"><span class="line__in">Did your <span class="scribble-word"><em>website</em><svg class="scribble" viewBox="0 0 300 40" preserveAspectRatio="none" aria-hidden="true"><path d="M6 27c38-9 86-15 140-15 52 0 104 4 148 12-46-3-96-4-146-1-36 2-70 7-98 13"/></svg></span>?</span></span>
+          </h1>
+          <p class="nb-lead hero-in">Send us your current website. We redesign it and show you the new version before you pay a cent.</p>
+
+          <form class="builder hero-in" id="url-form" novalidate>
+            <label class="builder__label" for="u-site">Your current website</label>
+            <input class="builder__input" id="u-site" name="website" type="text" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false" placeholder="yourbusiness.com" aria-describedby="u-site-err">
+            <p class="field__error field__error--light" id="u-site-err"></p>
+            <div class="builder__city" id="u-city-wrap" hidden>
+              <label class="builder__label" for="u-city">Your city</label>
+              <input class="builder__input" id="u-city" name="city" type="text" autocomplete="address-level2" placeholder="e.g. Columbus, OH" aria-describedby="u-city-err">
+              <p class="field__error field__error--light" id="u-city-err"></p>
+            </div>
+            <button class="btn btn--pink btn--lg btn--block" type="submit">Show me my redesign
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+            <ul class="assure">
+              <li>Free preview</li>
+              <li>Keep your domain and email</li>
+              <li>We protect your Google rankings</li>
+            </ul>
+          </form>
+        </div>
+
+        <!-- Before/after: drag (or use arrow keys) to compare. Both address bars show the visitor's domain once typed. -->
+        <div class="nb-hero__demo hero-in">
+          <figure class="live" id="live" hidden>
+            <div class="live__frame">
+              <div class="live__chrome"><i></i><i></i><i></i><span class="live__url" id="live-url"></span></div>
+              <div class="live__screen">
+                <img class="live__img" id="live-img" alt="" width="1200" height="800" referrerpolicy="no-referrer">
+                <div class="live__panel" id="live-panel" hidden><b id="live-domain"></b><span>Preview not available</span></div>
+              </div>
+            </div>
+            <figcaption class="live__cap">Your website as visitors see it today</figcaption>
+          </figure>
+          <div class="ba-wrap" id="ba-wrap">
+          <p class="demo-tag"><span class="dot" aria-hidden="true"></span> Drag to compare</p>
+          <div class="ba" id="ba" style="--pos: 50%">
+            <div class="ba__view">
+              <div class="site ba__after" data-niche="plumbing" aria-hidden="true">
+                <div class="site__chrome"><i></i><i></i><i></i><span class="site__url" data-url>yourbusiness.com</span></div>
+                <div class="site__body">
+                  <div class="piece piece--nav">
+                    <span class="p-logo"><svg class="p-icon" viewBox="0 0 24 24"><path data-icon/></svg><b data-k="brand">Your Business</b></span>
+                    <span class="p-links"><i>Services</i><i>Areas</i><i>About</i></span>
+                    <span class="p-pill" data-k="btn">Book now</span>
+                  </div>
+                  <div class="piece piece--hero">
+                    <p class="p-h" data-k="h">Leak? Fixed today.</p>
+                    <p class="p-sub" data-k="sub">Licensed plumbers across the metro area.</p>
+                    <span class="p-pill p-pill--lg" data-k="btn">Book now</span>
+                  </div>
+                  <div class="piece piece--visual">
+                    <svg class="p-big" viewBox="0 0 24 24"><path data-icon/></svg>
+                    <span class="p-chip" data-k="chip">Open 24/7</span>
+                  </div>
+                  <div class="piece piece--card" data-piece="3"><span class="p-dot"></span><b data-k="c0">Service one</b><i></i><i></i></div>
+                  <div class="piece piece--card" data-piece="4"><span class="p-dot"></span><b data-k="c1">Service two</b><i></i><i></i></div>
+                  <div class="piece piece--card" data-piece="5"><span class="p-dot"></span><b data-k="c2">Service three</b><i></i><i></i></div>
+                  <div class="piece piece--cta"><b data-k="cta">Call today</b><span class="p-pill p-pill--inv" data-k="btn">Book now</span></div>
+                </div>
+              </div>
+
+              <div class="ba__before" aria-hidden="true">
+                <div class="old">
+                  <div class="old__chrome"><span class="old__btn"></span><span class="old__btn"></span><span class="old__addr">http://www.<span data-url>yourbusiness.com</span>/index.html</span></div>
+                  <div class="old__page">
+                    <div class="old__banner">Welcome to Our Website!!</div>
+                    <div class="old__links"><u>Home</u> | <u>About Us</u> | <u>Services</u> | <u>Testimonials</u> | <u>Contact Us</u></div>
+                    <div class="old__cols">
+                      <div class="old__side"><u>Click Here</u><u>Our Services</u><u>Photo Gallery</u><u>Links</u><span class="old__counter">Visitors: 004213</span></div>
+                      <div class="old__main">
+                        <p class="old__h">Quality Service Since 1998</p>
+                        <p>We are a family owned business serving the area. Please call us for all of your needs. We look forward to serving you!!</p>
+                        <p class="old__warn">Page under construction</p>
+                        <p class="old__small">Best viewed in Internet Explorer at 1024 x 768. Last updated 2014.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ba__handle" aria-hidden="true"><span></span></div>
+              <span class="ba__tag ba__tag--before" aria-hidden="true">Before</span>
+              <span class="ba__tag ba__tag--after" aria-hidden="true">After</span>
+              <input class="ba__range" type="range" min="0" max="100" value="50" aria-label="Compare the old and new website. Lower shows more of the new design.">
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ REPORT CARD: filled in by redesign.js when a website check runs ============ -->
+    <section class="report" id="report" aria-labelledby="report-title" hidden tabindex="-1">
+      <div class="wrap">
+        <h2 class="nb-h2" id="report-title">Your website check</h2>
+        <p class="report__status" id="report-status" aria-live="polite"></p>
+        <div id="ts-box" class="ts-box"></div>
+        <ol class="report__steps" id="report-steps" hidden>
+          <li>Opening your site</li>
+          <li>Measuring speed</li>
+          <li>Checking Google</li>
+          <li>Looking at design</li>
+          <li>Finding your call buttons</li>
+        </ol>
+        <div class="report__body" id="report-body" hidden>
+          <div class="report__print-head">
+            <div class="report__print-brand">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1l2.9 8.1L23 12l-8.1 2.9L12 23l-2.9-8.1L1 12l8.1-2.9z"/></svg>
+              <span>marvelo<b>web</b></span>
+            </div>
+            <p class="report__print-title">Website report</p>
+            <p class="report__print-meta"><span>Website: <b id="print-site"></b></span> <span>City: <b id="print-city"></b></span> <span>Date: <b id="print-date"></b></span></p>
+          </div>
+          <div class="report__top">
+            <p class="report__score"><b id="report-score">–</b><span>/100</span></p>
+            <p class="report__verdict" id="report-verdict"></p>
+          </div>
+          <div class="report__cards" id="report-cards"></div>
+          <div class="pitch" id="report-pitch" hidden>
+            <h3 class="pitch__title" id="pitch-title"></h3>
+            <ol class="pitch__list" id="pitch-list"></ol>
+          </div>
+          <div class="pitch__actions">
+            <button class="btn btn--pink btn--lg" type="button" id="report-enhance">Fix my website
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+            <button class="btn btn--ghost btn--lg" type="button" id="report-print">Download report (PDF)</button>
+          </div>
+          <p class="report__print-foot">Prepared by MarveloWeb · marveloweb.com · hello@marveloweb.com</p>
+        </div>
+      </div>
+    </section>
+    <section class="ba-after" id="ba-after" aria-label="Before and after example" hidden><div class="wrap" id="ba-after-slot"></div></section>
+
+    <!-- ============ WARNING SIGNS CHECKLIST ============ -->
+    <section class="check" id="check">
+      <div class="wrap check__grid">
+        <div>
+          <h2 class="nb-h2">Is your website costing you calls?</h2>
+          <p class="check__lead">Tick anything that sounds like your site. Be honest, nobody's watching.</p>
+          <ul class="check__list" id="check-list">
+            <li><label><input type="checkbox" value="Looks dated or hard to read on a phone"><span>It looks dated, or it's hard to read on a phone</span></label></li>
+            <li><label><input type="checkbox" value="No tap-to-call"><span>Customers can't tap to call you</span></label></li>
+            <li><label><input type="checkbox" value="Slow to load"><span>It takes more than a few seconds to load</span></label></li>
+            <li><label><input type="checkbox" value="Can't update it myself"><span>You can't update prices or photos yourself</span></label></li>
+            <li><label><input type="checkbox" value="Not found on local searches"><span>You don't show up when people nearby search</span></label></li>
+            <li><label><input type="checkbox" value="No online booking or quotes"><span>There's no way to book or ask for a quote online</span></label></li>
+          </ul>
+        </div>
+        <aside class="meter" aria-live="polite">
+          <p class="meter__count"><b id="meter-n">0</b> of 6</p>
+          <div class="meter__bar" aria-hidden="true"><span id="meter-bar"></span></div>
+          <p class="meter__msg" id="meter-msg">Tick anything that sounds familiar.</p>
+          <a class="btn btn--pink btn--lg btn--block" href="#start" id="meter-cta">Fix these in my free redesign
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ 3D ASSEMBLY ============ -->
+    <section class="assemble" id="see-it" aria-labelledby="assemble-title">
+      <div class="assemble__sticky">
+        <h2 class="assemble__title" id="assemble-title">Your new website is already built. Come see it.</h2>
+        <div class="stage">
+          <div class="site" data-niche="plumbing" role="img" aria-label="A finished website for a local business, assembled from floating pieces">
+            <div class="site__chrome"><i></i><i></i><i></i><span class="site__url">flowrightplumbing.com</span></div>
+            <div class="site__body">
+              <div class="piece piece--nav" data-piece="0">
+                <span class="p-logo"><svg class="p-icon" viewBox="0 0 24 24" aria-hidden="true"><path data-icon/></svg><b data-k="brand">FlowRight Plumbing</b></span>
+                <span class="p-links"><i>Services</i><i>Areas</i><i>About</i></span>
+                <span class="p-pill" data-k="btn">Book a plumber</span>
+              </div>
+              <div class="piece piece--hero" data-piece="1">
+                <p class="p-h" data-k="h">Leak? Fixed today.</p>
+                <p class="p-sub" data-k="sub">Licensed plumbers across the metro area. Upfront prices, no call-out surprises.</p>
+                <span class="p-pill p-pill--lg" data-k="btn">Book a plumber</span>
+              </div>
+              <div class="piece piece--visual" data-piece="2">
+                <svg class="p-big" viewBox="0 0 24 24" aria-hidden="true"><path data-icon/></svg>
+                <span class="p-chip" data-k="chip">Open 24/7</span>
+              </div>
+              <div class="piece piece--card" data-piece="3"><span class="p-dot"></span><b data-k="c0">Emergency repairs</b><i></i><i></i></div>
+              <div class="piece piece--card" data-piece="4"><span class="p-dot"></span><b data-k="c1">Water heaters</b><i></i><i></i></div>
+              <div class="piece piece--card" data-piece="5"><span class="p-dot"></span><b data-k="c2">Drain cleaning</b><i></i><i></i></div>
+              <div class="piece piece--cta" data-piece="6"><b data-k="cta">Call now, we answer around the clock</b><span class="p-pill p-pill--inv" data-k="btn">Book a plumber</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="assemble__foot">
+          <p class="assemble__hint" aria-hidden="true">Keep scrolling</p>
+          <div class="picker" role="group" aria-label="Show this website for a different trade">
+            <span class="picker__label">See it for</span>
+            <button type="button" data-niche="plumbing" aria-pressed="true">Plumbing</button>
+            <button type="button" data-niche="hvac" aria-pressed="false">HVAC</button>
+            <button type="button" data-niche="roofing" aria-pressed="false">Roofing</button>
+            <button type="button" data-niche="dental" aria-pressed="false">Dental</button>
+            <button type="button" data-niche="medspa" aria-pressed="false">Med spa</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ KEEP / CHANGE ============ -->
+    <section class="keep">
+      <div class="wrap">
+        <h2 class="nb-h2">A new website, without losing what works</h2>
+        <div class="keep__grid">
+          <div class="keep__col">
+            <h3>What you keep</h3>
+            <ul>
+              <li>Your domain name</li>
+              <li>Your business email</li>
+              <li>Your Google rankings, with old pages redirected to new ones</li>
+              <li>Your phone number and the content that already brings in customers</li>
+            </ul>
+          </div>
+          <div class="keep__col keep__col--change">
+            <h3>What we change</h3>
+            <ul>
+              <li>How it looks, on every screen</li>
+              <li>How fast it loads</li>
+              <li>How easy it is to call, book or ask for a quote</li>
+              <li>How easy it is for you to update</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="how" id="how">
+      <div class="wrap">
+        <h2 class="nb-h2">From your old site to your new one in four steps</h2>
+        <ol class="how__steps how__steps--4">
+          <li>
+            <span class="how__num">1</span>
+            <h3>Send us your website</h3>
+            <p>Just the address. We look at what you have and what works for your trade.</p>
+            <a class="how__link" href="#start">Do it now</a>
+          </li>
+          <li>
+            <span class="how__num">2</span>
+            <h3>We build your preview</h3>
+            <p>Your redesigned website, ready to click through. It costs you nothing.</p>
+          </li>
+          <li>
+            <span class="how__num">3</span>
+            <h3>You review and approve</h3>
+            <p>Ask for changes. You pay the balance only once you approve the final site.</p>
+          </li>
+          <li>
+            <span class="how__num">4</span>
+            <h3>We switch it over</h3>
+            <p>Live within 7 days on the same domain, with your old pages redirected.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ PRICING ============ -->
+    <section class="pricing" id="pricing">
+      <div class="wrap">
+        <div class="section-head section-head--center">
+          <h2>Prices, up front</h2>
+          <p class="pricing__today">What you pay today: <b>$0</b>. You pay only after you've approved your new site.</p>
+        </div>
+        <div class="plans">
+          <article class="plan">
+            <h3>Starter</h3>
+            <p class="plan__for">A fresh, fast version of a small site</p>
+            <p class="plan__price"><small>from</small> $999</p>
+            <ul>
+              <li>Up to 5 pages redesigned</li>
+              <li>Built for phones first</li>
+              <li>Click-to-call &amp; quote form</li>
+              <li>Old pages redirected</li>
+              <li>Live in 7 days</li>
+            </ul>
+            <a class="btn btn--ghost btn--block" href="#start">Start with a free preview</a>
+          </article>
+          <article class="plan plan--featured">
+            <span class="plan__flag">Right for most redesigns</span>
+            <h3>Growth</h3>
+            <p class="plan__for">For businesses that want more calls and bookings</p>
+            <p class="plan__price"><small>from</small> $2,499</p>
+            <ul>
+              <li>Up to 12 pages redesigned</li>
+              <li>A page for each service and town</li>
+              <li>Online booking or quote form</li>
+              <li>Speed and local SEO fixes</li>
+              <li>Edit your own content</li>
+              <li>30 days of free changes</li>
+            </ul>
+            <a class="btn btn--pink btn--block" href="#start">Start with a free preview</a>
+          </article>
+          <article class="plan">
+            <h3>Custom</h3>
+            <p class="plan__for">Large sites, multiple locations and online stores</p>
+            <p class="plan__price">Let's talk</p>
+            <ul>
+              <li>As many pages as you need</li>
+              <li>Content moved over for you</li>
+              <li>Online payments</li>
+              <li>Priority care plan</li>
+            </ul>
+            <a class="btn btn--ghost btn--block" href="#start">Start with a free preview</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GUARANTEE ============ -->
+    <section class="promise">
+      <div class="wrap">
+        <p class="promise__big">You pay nothing until you love it.</p>
+        <p class="promise__small">Your current website stays live the whole time. If the redesign isn't right, we revise it. If it's still not for you, walk away.</p>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="faq" id="faq">
+      <div class="wrap faq__inner">
+        <div class="section-head">
+          <h2>Redesign questions, answered</h2>
+        </div>
+        <div class="faq__list">
+          <details>
+            <summary>Will I lose my Google rankings?</summary>
+            <p>We keep your domain, carry over the content that ranks, and redirect old page addresses to the new ones so Google can follow the move. Rankings can wobble for a few weeks after any redesign, and we'll keep an eye on it with you.</p>
+          </details>
+          <details>
+            <summary>Do I keep my domain and email?</summary>
+            <p>Yes. Your domain and email stay exactly as they are. We only change the website.</p>
+          </details>
+          <details>
+            <summary>What happens to my old website?</summary>
+            <p>It stays live until you approve the new one. Then we switch over and keep a backup of the old site.</p>
+          </details>
+          <details>
+            <summary>What if I don't like the redesign?</summary>
+            <p>Tell us what feels off and we'll rework it. You only pay once you've approved the final site.</p>
+          </details>
+          <details>
+            <summary>Who owns the new website?</summary>
+            <p>You do. If you ever move on, the site goes with you.</p>
+          </details>
+          <details>
+            <summary>Where are you based?</summary>
+            <p>Our team is in India. That's how we keep prices fair and get sites live in a week, and we're happy to talk on a call at a time that suits you.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ START: 2-step form ============ -->
+    <section class="start" id="start" data-sticky-hide>
+      <div class="wrap start__grid">
+        <div class="start__copy">
+          <h2 class="start__title">See <span id="echo-site">your website</span>, redesigned.</h2>
+          <p>Two quick steps and we start on your preview. Your current site stays exactly as it is until you say go.</p>
+          <ul class="assure assure--ink">
+            <li>Free preview</li>
+            <li>No card needed</li>
+            <li>Pay only if you love it</li>
+          </ul>
+        </div>
+
+        <form class="form funnel" id="funnel" novalidate data-subject="Free redesign preview" data-subject-field="website">
+          <div class="funnel__progress">
+            <p class="funnel__step">Step 1 of 2: your website</p>
+            <div class="funnel__bar" aria-hidden="true"><span></span></div>
+          </div>
+
+          <fieldset class="funnel__panel" data-label="Step 1 of 2: your website">
+            <legend class="sr">Your website</legend>
+            <div class="field">
+              <label for="s-site">Current website</label>
+              <input id="s-site" name="website" type="text" inputmode="url" autocapitalize="off" spellcheck="false" placeholder="yourbusiness.com" required aria-describedby="s-site-err" data-msg="Add your website address so we know what to redesign.">
+              <p class="field__error" id="s-site-err"></p>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="s-biz">Business name</label>
+                <input id="s-biz" name="business" type="text" autocomplete="organization" required aria-describedby="s-biz-err" data-msg="Add your business name.">
+                <p class="field__error" id="s-biz-err"></p>
+              </div>
+              <div class="field">
+                <label for="s-trade">What do you do?</label>
+                <select id="s-trade" name="trade">
+                  <option value="plumbing">Plumbing</option>
+                  <option value="hvac">HVAC</option>
+                  <option value="roofing">Roofing</option>
+                  <option value="dental">Dental</option>
+                  <option value="medspa">Med spa</option>
+                  <option value="other">Something else</option>
+                </select>
+              </div>
+            </div>
+            <input type="hidden" name="issues" id="s-issues" data-label="Warning signs they ticked">
+            <button class="btn btn--pink btn--lg btn--block" type="button" data-next>Next: where to send it
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+          </fieldset>
+
+          <fieldset class="funnel__panel" data-label="Step 2 of 2: where to send your preview" hidden>
+            <legend class="sr">Where to send your preview</legend>
+            <div class="field">
+              <label for="s-name">Your name</label>
+              <input id="s-name" name="name" type="text" autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="s-email">Email</label>
+              <input id="s-email" name="email" type="email" autocomplete="email" required aria-describedby="s-email-err" data-msg="Enter an email we can send your preview to.">
+              <p class="field__error" id="s-email-err"></p>
+            </div>
+            <div class="field">
+              <label for="s-phone">Phone or WhatsApp</label>
+              <input id="s-phone" name="phone" type="tel" autocomplete="tel" required aria-describedby="s-phone-err" data-msg="Add a number so we can reach you about your redesign.">
+              <p class="field__error" id="s-phone-err"></p>
+            </div>
+            <div class="ts-box" id="ts-box-lead"></div>
+            <button class="btn btn--pink btn--lg btn--block" type="submit">Get my free redesign
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+            <p class="funnel__done-small">We only use your details to contact you about your redesign.</p>
+            <button class="funnel__back" type="button" data-back>Back</button>
+          </fieldset>
+
+          <div class="funnel__done" hidden tabindex="-1">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7 12.5l3.5 3.5L17 9"/></svg>
+            <div data-done-sent hidden>
+              <p class="funnel__done-title">Thanks! We'll send your free redesign plan within 24 hours.</p>
+            </div>
+            <div data-done-mail>
+              <p class="funnel__done-title">Almost there.</p>
+              <p>Your email app should open with the details for <b data-done-name>your website</b> filled in. Press send and we'll start on your redesign.</p>
+              <p class="funnel__done-small">Nothing opened? Email us at <a href="mailto:hello@marveloweb.com">hello@marveloweb.com</a>.</p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__top">
+        <p class="footer__tag">Websites people <em>marvel</em> at.</p>
+        <nav class="footer__nav" aria-label="Footer">
+          <a href="#how">How it works</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+          <a href="new-website.html">Get a new website</a>
+          <a href="mailto:hello@marveloweb.com">hello@marveloweb.com</a>
+        </nav>
+      </div>
+      <p class="footer__word" aria-hidden="true">marveloweb<span>✦</span></p>
+      <div class="footer__bottom">
+        <p>© <span id="year">2026</span> MarveloWeb</p>
+        <a href="#top">Back to top</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Phones: the main action is always one tap away -->
+  <a class="sticky-cta" href="#start" aria-hidden="true" tabindex="-1">Get my free redesign
+    <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </a>
+
+  <script src="main.js?v=13"></script>
+  <script src="redesign.js?v=19"></script>
+</body>
+</html>

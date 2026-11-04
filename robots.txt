@@ -1,0 +1,5 @@
+# Pages keep out of Google with a noindex tag, which Google must be able to crawl to see.
+# These folders have no pages to tag, so they are blocked here instead.
+User-agent: *
+Disallow: /docs/
+Disallow: /worker/

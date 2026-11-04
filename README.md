@@ -14,14 +14,14 @@ Then open http://localhost:8080.
 
 ## Files
 
-- `index.html`: home page for businesses with no website. Brand intro, then a small "Where are you starting from?" box (once per visit) that sends people with a website to `redesign.html`. Below it: live builder with photo templates for ten trades, real work, "customers can't find you" (Google, Google Maps, Apple Maps, Bing), payback calculator, standard or rush pricing, 2-step preview form
+- `index.html`: home page for businesses with no website. Brand intro, then (the path chooser is commented out for now): live builder with photo templates for ten trades, real work, "customers can't find you" (Google, Google Maps, Apple Maps, Bing), payback calculator, standard or rush pricing, 2-step preview form
 - `new-website.html`: old address of the home page; forwards to `./?path=new`
-- `redesign.html`: homepage for businesses that already have a website (before/after slider, warning-signs checklist, 3D assembly, 2-step preview form)
+- `redesign.html`: redirects home while the redesign page is hidden. `redesign-simple.html` + `redesign-simple.css` and `redesign-full.html` are parked (not linked, noindex)
 - `styles.css`: shared design tokens, layout, intro, chooser and 3D assembly styles
 - `new.css`: homepage sections shared by both homepages (hero, steps, pricing, guarantee, 2-step form, sticky phone CTA)
 - `new.js`: path chooser, rotating headline words, live builder and trade templates, WhatsApp links, real-work cards, search mock, payback calculator and rush pricing on `index.html`
 - `new-extras.css`: styles for those `index.html` additions
-- `redesign.css`, `redesign.js`: before/after slider, checklist and keep/change sections on `redesign.html`
+- `redesign.css`, `redesign.js`: before/after slider, checklist and website check on `redesign-full.html`
 - `main.js`: shared intro, nav, trade skins, 3D assembly, 2-step lead form and sticky CTA
 - `worker/`: the Cloudflare Worker behind the website check (`wrangler.toml`; `src/` has `index.js` routes, `url-guard.js`, `page-scan.js`, `psi.js`, `rankings.js`, `report.js`, `limits.js`, `leads.js`, `admin.js`; `test/` has the vitest suite)
 - `leads.html`, `leads.js`, `leads.css`: the private leads page (see "Website check" below). Not linked from anywhere, and hidden from search engines
@@ -36,11 +36,11 @@ When you change a CSS or JS file, bump its `?v=` number in the HTML so browsers 
 - Prices (including the rush add-on of +$300 Starter / +$500 Growth), contact email and social links are placeholders. Rush prices live in the `data-rush` attributes in the pricing section.
 - Template photos in the hero preview come from Unsplash (free to use) and load from images.unsplash.com.
 - The four work examples and the niche demo are labelled concepts, not client projects.
-- While `API_BASE` in `redesign.js` is empty, the free-preview form has no backend. It opens the visitor's email app with their details filled in.
+- The form on `index.html` has no backend. It opens the visitor's email app with their details filled in.
 
 ## Website check (worker/)
 
-A Cloudflare Worker (`worker/`) powers the free website check on `redesign.html`.
+A Cloudflare Worker (`worker/`) powers the free website check on the hidden `redesign-full.html`.
 
 - `POST /check` takes a website and a city, checks Turnstile and rate limits, then reads the homepage, runs PageSpeed and looks up Google rankings (DataForSEO). It returns a scored report and caches it in KV for a day.
 - `POST /enhance` takes the finished 2-step form (including trade, warning signs and city), stores it as a lead in KV and answers 202. No email is sent.

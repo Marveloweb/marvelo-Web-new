@@ -361,3 +361,7 @@ html:has(.pick[open]) { overflow: hidden; }
 
 /* the full stop stays on the same line as the rotating word */
 .start__title .keep { white-space: nowrap; color: var(--ink); }
+
+/* Quieter details: plain eyebrow label, plain icons in the zero cards */
+.nb-hero .eyebrow { padding: 0; border: 0; background: none; }
+.zero .zero__list svg { width: 28px; height: 28px; padding: 0; background: none; border-radius: 0; }

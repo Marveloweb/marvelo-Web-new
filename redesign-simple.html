@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Website redesign for local businesses | MarveloWeb</title>
+  <meta name="description" content="MarveloWeb rebuilds websites for local businesses and shows you the new version free before you pay. Plans start at $999.">
+  <meta name="theme-color" content="#17171A">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230F0F12'/%3E%3Cpath d='M16 5l2.6 8.4L27 16l-8.4 2.6L16 27l-2.6-8.4L5 16l8.4-2.6z' fill='%23FF3D7F'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700&family=Instrument+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="redesign-simple.css?v=1">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="page">
+    <header class="top">
+      <a class="top__name" href="./" aria-label="MarveloWeb home">marveloweb</a>
+      <nav aria-label="Primary">
+        <a href="#plans">Plans</a>
+        <a href="#start">Contact</a>
+        <a href="new-website.html">Need a new website?</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <div class="intro">
+        <h1>We rebuild websites for local businesses.</h1>
+        <p>Send us the site you have now. We'll make a new version and show it to you before you pay anything. Your current site stays online until you approve the new one.</p>
+      </div>
+
+      <section id="plans" aria-labelledby="plans-title">
+        <h2 id="plans-title">Plans</h2>
+        <p class="note">You pay after you've approved the new site, not before.</p>
+        <div class="plans">
+          <article class="plan">
+            <h3>Micro</h3>
+            <p class="plan__for">A fresh, fast version of a small site.</p>
+            <p class="plan__price">$999</p>
+            <ul>
+              <li>Up to 5 pages redesigned</li>
+              <li>Built for phones first</li>
+              <li>Click-to-call and a quote form</li>
+              <li>Old pages redirected</li>
+              <li>Live within 7 days of approval</li>
+            </ul>
+            <a href="#start">Ask about Micro</a>
+          </article>
+          <article class="plan">
+            <h3>Growth</h3>
+            <p class="plan__for">For businesses that want more calls and bookings.</p>
+            <p class="plan__price">$2,499</p>
+            <ul>
+              <li>Up to 12 pages redesigned</li>
+              <li>A page for each service and town</li>
+              <li>Online booking or a quote form</li>
+              <li>Speed and local SEO fixes</li>
+              <li>Edit your own content</li>
+              <li>30 days of free changes</li>
+            </ul>
+            <a href="#start">Ask about Growth</a>
+          </article>
+          <article class="plan">
+            <h3>Custom</h3>
+            <p class="plan__for">Large sites, multiple locations and online stores.</p>
+            <p class="plan__price">Let's talk</p>
+            <ul>
+              <li>As many pages as you need</li>
+              <li>Content moved over for you</li>
+              <li>Online payments</li>
+              <li>Priority care plan</li>
+            </ul>
+            <a href="#start">Ask about Custom</a>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="how-title">
+        <h2 id="how-title">How it works</h2>
+        <ol class="steps">
+          <li>You send us your website and tell us what you'd like to change.</li>
+          <li>We send you a free preview of the new version.</li>
+          <li>You ask for changes until it's right. Then you pay and we launch it. Your domain and email stay as they are.</li>
+        </ol>
+      </section>
+
+      <section class="contact" id="start" aria-labelledby="start-title">
+        <div>
+          <h2 id="start-title">Tell us about your site</h2>
+          <p class="note">Or email <a href="mailto:hello@marveloweb.com">hello@marveloweb.com</a>.</p>
+        </div>
+        <!-- The form logic is the shared form.funnel in main.js; one panel means no next/back. -->
+        <form class="funnel" novalidate data-subject="Website redesign enquiry" data-subject-field="website">
+          <div class="funnel__progress" hidden></div>
+          <fieldset class="funnel__panel">
+            <legend class="sr">Your details</legend>
+            <div>
+              <label for="s-site">Current website</label>
+              <input id="s-site" name="website" type="text" inputmode="url" autocapitalize="off" spellcheck="false" required aria-describedby="s-site-err" data-msg="Add your website address.">
+              <p class="field__error" id="s-site-err"></p>
+            </div>
+            <div>
+              <label for="s-plan">Plan</label>
+              <select id="s-plan" name="plan">
+                <option>Micro ($999)</option>
+                <option>Growth ($2,499)</option>
+                <option>Custom</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div>
+              <label for="s-name">Your name</label>
+              <input id="s-name" name="name" type="text" autocomplete="name">
+            </div>
+            <div>
+              <label for="s-email">Email</label>
+              <input id="s-email" name="email" type="email" autocomplete="email" required aria-describedby="s-email-err" data-msg="Enter an email we can reply to.">
+              <p class="field__error" id="s-email-err"></p>
+            </div>
+            <div>
+              <label for="s-phone">Phone or WhatsApp</label>
+              <input id="s-phone" name="phone" type="tel" autocomplete="tel">
+            </div>
+            <button class="send" type="submit">Send</button>
+            <p class="small">We only use your details to contact you about your redesign.</p>
+          </fieldset>
+          <div class="funnel__done" hidden tabindex="-1">
+            <p><b>Almost there.</b> Your email app should open with your details filled in for <b data-done-name>your website</b>. Press send and we'll get back to you.</p>
+            <p class="small">Nothing opened? Email us at <a href="mailto:hello@marveloweb.com">hello@marveloweb.com</a>.</p>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="year">2026</span> MarveloWeb</p>
+      <a href="mailto:hello@marveloweb.com">hello@marveloweb.com</a>
+    </footer>
+  </div>
+  <script src="main.js?v=13"></script>
+</body>
+</html>
